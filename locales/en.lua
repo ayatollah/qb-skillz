@@ -42,6 +42,8 @@ local Translations = {
         removing = 'Removing: ',
         skill = 'Skill ',
         doesntexist = " doesn't exist",
+        resting = 'You\'re resting',
+        startexercise = 'You can now do exercise again',
     },
 
     error = {

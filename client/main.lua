@@ -9,7 +9,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 			Citizen.Wait(seconds)
 
 			for skill, value in pairs(Config.Skills) do
-				UpdateSkill(skill, value[Lang:t('states.remam'])
+				UpdateSkill(skill, value[Lang:t('states.remam')])
 			end
 
 			TriggerServerEvent("skillsystem:update", json.encode(Config.Skills))
@@ -38,7 +38,7 @@ end)
 				UpdateSkill(Lang:t('skill.strenth'), 0.2)
 				end
 			elseif IsPedSwimmingUnderWater(ped) then
-				UpdateSkill(Lang:t('skill.lungcap', 0.5)
+				UpdateSkill(Lang:t('skill.lungcap'), 0.5)
 			elseif IsPedShooting(ped) then
 				UpdateSkill(Lang:t('skill.shooting'), 0.1)
 			elseif DoesEntityExist(vehicle) and GetPedInVehicleSeat(vehicle, -1) == ped then
