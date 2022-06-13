@@ -9,7 +9,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 			Citizen.Wait(seconds)
 
 			for skill, value in pairs(Config.Skills) do
-				UpdateSkill(skill, value["RemoveAmount"])
+				UpdateSkill(skill, value[Lang:t('states.remam'])
 			end
 
 			TriggerServerEvent("skillsystem:update", json.encode(Config.Skills))
@@ -18,7 +18,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 
 RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
 	for skill, value in pairs(Config.Skills) do
-		Config.Skills[skill]["Current"] = 0
+		Config.Skills[skill][Lang:t('states.current')] = 0
 	end
 end)
 
@@ -31,28 +31,28 @@ end)
 			local islaststand = QBCore.Functions.GetPlayerData().metadata["islaststand"]
 			if LocalPlayer.state.isLoggedIn and not isDead and not islaststand then
 			if IsPedRunning(ped) then
-				UpdateSkill("Stamina", 0.1)
+				UpdateSkill(Lang:t('skill.stamina'), 0.1)
 			elseif IsPedInMeleeCombat(ped) then
 				local isTargetting, targetEntity = GetPlayerTargetEntity(PlayerId())
 				if isTargetting and not IsEntityDead(targetEntity) and GetMeleeTargetForPed(ped) ~= 0 then
-				UpdateSkill("Strength", 0.2)
+				UpdateSkill(Lang:t('skill.strenth'), 0.2)
 				end
 			elseif IsPedSwimmingUnderWater(ped) then
-				UpdateSkill("Lung Capacity", 0.5)
+				UpdateSkill(Lang:t('skill.lungcap', 0.5)
 			elseif IsPedShooting(ped) then
-				UpdateSkill("Shooting", 0.1)
+				UpdateSkill(Lang:t('skill.shooting'), 0.1)
 			elseif DoesEntityExist(vehicle) and GetPedInVehicleSeat(vehicle, -1) == ped then
 				local speed = GetEntitySpeed(vehicle) * 3.6
 				if GetVehicleClass(vehicle) == 8 or GetVehicleClass(vehicle) == 13 and speed >= 5 then
 					local rotation = GetEntityRotation(vehicle)
 					if IsControlPressed(0, 210) then
 						if rotation.x >= 25.0 then
-							UpdateSkill("Wheelie", 0.2)
+							UpdateSkill(Lang:t('skill.wheelie'), 0.2)
 						end 
 					end
 				end
 				if speed >= 80 then
-					UpdateSkill("Driving", 0.1)
+					UpdateSkill(Lang:t('skill.driving'), 0.1)
 				end
 			end
 			end

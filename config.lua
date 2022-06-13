@@ -10,45 +10,45 @@ Config.Debug = false -- debug print
 Config.Skillmenu = "skills" -- skillmenu command
 
 Config.Skills = {
-    ["Stamina"] = {
-        ["Current"] = 0, -- Default value 
-        ["RemoveAmount"] = -0.3, -- % to remove when updating,
-        ["Stat"] = "MP0_STAMINA", -- GTA stat hashname
+    [Lang:t('skills.stamina')] = {
+        [Lang:t('states.current')] = 0, -- Default value 
+        [Lang:t('states.remam')] = -0.3, -- % to remove when updating,
+        [Lang:t('states.stat')] = "MP0_STAMINA", -- GTA stat hashname
         ['icon'] = 'fas fa-walking',
     },
 
-    ["Strength"] = {
-        ["Current"] = 0,
-        ["RemoveAmount"] = -0.3,
-        ["Stat"] = "MP0_STRENGTH",
+    [Lang:t('skills.strength')] = {
+        [Lang:t('states.current')] = 0,
+        [Lang:t('states.remam')] = -0.3,
+        [Lang:t('states.stat')] = "MP0_STRENGTH",
         ['icon'] = 'fas fa-dumbbell',
     },
 
-    ["Lung Capacity"] = {
-        ["Current"] = 0,
-        ["RemoveAmount"] = -0.1,
-        ["Stat"] = "MP0_LUNG_CAPACITY",
+    [Lang:t('skills.lungcap')] = {
+        [Lang:t('states.current')] = 0,
+        [Lang:t('states.remam')] = -0.1,
+        [Lang:t('states.stat')] = "MP0_LUNG_CAPACITY",
         ['icon'] = 'fas fa-heartbeat',
     },
 
-    ["Shooting"] = {
-        ["Current"] = 0,
-        ["RemoveAmount"] = -0.1,
-        ["Stat"] = "MP0_SHOOTING_ABILITY",
+    [Lang:t('skills.shooting')] = {
+        [Lang:t('states.current')] = 0,
+        [Lang:t('states.remam')] = -0.1,
+        [Lang:t('states.stat')] = "MP0_SHOOTING_ABILITY",
         ['icon'] = 'fas fa-bullseye',
     },
 
-    ["Driving"] = {
-        ["Current"] = 0,
-        ["RemoveAmount"] = -0.5,
-        ["Stat"] = "MP0_DRIVING_ABILITY",
+    [Lang:t('skills.driving')] = {
+        [Lang:t('states.current')] = 0,
+        [Lang:t('states.remam')] = -0.5,
+        [Lang:t('states.stat')] = "MP0_DRIVING_ABILITY",
         ['icon'] = 'fas fa-car-side',
     },
 
-    ["Wheelie"] = {
-        ["Current"] = 0,
-        ["RemoveAmount"] = -0.2,
-        ["Stat"] = "MP0_WHEELIE_ABILITY",
+    [Lang:t('skills.wheelie')] = {
+        [Lang:t('states.current')] = 0,
+        [Lang:t('states.remam')] = -0.2,
+        [Lang:t('states.stat')] = "MP0_WHEELIE_ABILITY",
         ['icon'] = 'fas fa-wheelchair',
     }
 }

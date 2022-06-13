@@ -19,14 +19,14 @@ local function createSkillMenu()
     skillMenu = {}
     skillMenu[#skillMenu + 1] = {
         isHeader = true,
-        header = 'Skills',
+        header = Lang:t('skills.skills'),
         isMenuHeader = true,
         icon = 'fas fa-chart-simple'
     }
     for k,v in pairsByKeys(Config.Skills) do
         skillMenu[#skillMenu + 1] = {
             header = ''.. k .. '',
-            txt = ''..v['Current']..'%',
+            txt = ''..v[Lang:t('states.current')]..'%',
             icon = ''..v['icon']..'',
             params = {
                 args = {
